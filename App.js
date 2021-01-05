@@ -5,10 +5,7 @@ import { StyleSheet, Text, TextInput, View, Image, Button } from 'react-native';
 export default function App() {
 
     let imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrmajIXJJ2vzao3-hmdqEo6diAAlmZPr1idA&usqp=CAU"
-
     var text = ""
-
-
 
   return (
     <View>
@@ -22,8 +19,10 @@ export default function App() {
         <View style={styles.middleView}>
             <Text style={styles.secondaryTitles}>What would you like to get out of this course?</Text>
             <TextInput
-                placeholder="Initial text"
+                style={styles.textInput}
+                placeholder="Enter text"
                 onChangeText={ (value) => text = value}
+                multiline
             />
         </View>
         <View style={styles.bottomView}>
@@ -70,6 +69,9 @@ const styles = StyleSheet.create({
     image: {
         height: 100,
         width: 100,
+    },
+    textInput: {
+        backgroundColor: '#F2F2F2'
     }
 
 });
